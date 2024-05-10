@@ -1,16 +1,16 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://www6.0zz0.com/2024/05/10/23/578888797.jpg");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://www6.0zz0.com/2024/05/10/23/578888797.jpg");
+    }
+   </style>
+    """,
+    unsafe_allow_html=True
+)
 
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
