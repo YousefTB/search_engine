@@ -4,7 +4,7 @@ from Search_Engine import SearchEngine
 background_image = """
 <style>
 [data-testid="stAppViewContainer"] > .main {
-    background-image: url("https://www3.0zz0.com/2024/05/10/23/927335846.jpg");
+    background-image: url("https://github.com/YousefTB/search_engine/blob/main/photos/pixlr-image-generator-9685c53e-3ae1-459b-b265-1778cebba5e2.png");
     background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
     background-position: center;  
     background-repeat: no-repeat;
