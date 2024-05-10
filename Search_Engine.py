@@ -12,18 +12,18 @@ import qalsadi.lemmatizer
 class SearchEngine():
     def __init__(self):
         
-        self.__docs = pd.read_csv("Arabic news preprocessed_2500.csv", index_col=0)
+        self.__docs = pd.read_csv("assets/Arabic news preprocessed_2500.csv", index_col=0)
         
-        with open("term_document_matrix_data.pkl","rb") as file:
+        with open("assets/term_document_matrix_data.pkl","rb") as file:
             self.__data = pickle.load(file)
             
-        with open("tfidf_vectorizer.pkl", "rb") as file:
+        with open("assets/tfidf_vectorizer.pkl", "rb") as file:
             self.__tfidf_vectorizer = pickle.load(file)
 
-        with open("tfidf_doc_vec.pkl", 'rb') as file:
+        with open("assets/tfidf_doc_vec.pkl", 'rb') as file:
             self.__tfidf_docs_vec = pickle.load(file)
             
-        with open("docs_norm.pkl", "rb") as file:
+        with open("assets/docs_norm.pkl", "rb") as file:
             self.__tfidf_docs_norm = pickle.load(file)
 
         self.__voc = self.__data['Voc']
