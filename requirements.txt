@@ -1,9 +1,7 @@
-python>=3.7
 streamlit
 pandas
 numpy
 scikit-learn
 qalsadi
-pickle
 nltk
 re
