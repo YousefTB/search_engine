@@ -9,6 +9,8 @@ from nltk.tokenize import word_tokenize
 import re
 import qalsadi.lemmatizer
 nltk.download("punkt")
+nltk.download('stopwords')
+
 class SearchEngine():
     def __init__(self):
         
