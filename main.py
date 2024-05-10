@@ -1,6 +1,9 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
+[theme]
+backgroundColor = "#F0F0F0"
+
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
     
