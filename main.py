@@ -1,8 +1,16 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
-[theme]
-backgroundColor = "#F0F0F0"
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://drive.google.com/file/d/14XDz57WVyJEkoD7nCvE6zVCxUVLxLBnJ/view?usp=drive_link");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
