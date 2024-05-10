@@ -19,7 +19,7 @@ if "my_engine" not in st.session_state:
     
 
 text_input = st.text_input("Search bar", value=None, max_chars=256, key="text1", placeholder="بتدوّر على إيه ؟")
-col1, col2, col3 = st.beta_columns([1,2,3])
+col1, col2, col3 = st.columns([1,2,50])
 with col4:
     button1_clicked = st.button("Search", key='button1')
 if button1_clicked:
