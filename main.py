@@ -4,7 +4,7 @@ from Search_Engine import SearchEngine
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://drive.google.com/file/d/14XDz57WVyJEkoD7nCvE6zVCxUVLxLBnJ/view?usp=drive_link");
+background-image: url("https://www6.0zz0.com/2024/05/10/23/578888797.jpg");
 background-size: cover;
 }
 </style>
