@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import re
 import qalsadi.lemmatizer
-
+nltk.download("punkt")
 class SearchEngine():
     def __init__(self):
         
