@@ -76,7 +76,7 @@ class SearchEngine():
         for doc in list_docs:
             doc_temp = doc.split()
             for word in doc_temp:
-                if word not in voc:
+                if word not in self.__voc:
                     self.__voc.append(word)
 
     def __term_document_matrix_indexing(self):
