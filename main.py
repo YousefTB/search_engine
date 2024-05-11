@@ -1,9 +1,11 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
+st.set_page_config(page_title="Dynamo SearchEngine", page_icon="photos/icon.png", menu_items={"About":"Creator: Yousef Elbaroudy\nEmail: yousef.elbaroudy02@gmail.com"})
+
 c1, c2, c3 = st.columns([1,30,1])
 with c2:
-    st.image('photos/bfcai.png', caption="Faculty of Computer and Artificial Intelligence")
+    st.image('photos/bfcai.png', caption="Faculty of Computers and Artificial Intelligence")
 
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
