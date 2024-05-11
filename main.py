@@ -32,10 +32,10 @@ with tab1:
                 st.write(result[i])
                 
 with tab2:
-    text_input = st.text_input("Search bar", value=None, max_chars=256, key="text1", placeholder="بتدوّر على إيه ؟")
+    text_input = st.text_input("Search bar", value=None, max_chars=256, key="text2", placeholder="بتدوّر على إيه ؟")
     col1, col2, col3 = st.columns([5,2,5])
     with col2:
-        button1_clicked = st.button("Search", key='button1')
+        button1_clicked = st.button("Search", key='button2')
         
     if button1_clicked:
         with st.spinner("Searching ..."):
