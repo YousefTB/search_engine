@@ -113,7 +113,7 @@ class SearchEngine():
         return dict_res
 
     def __tfidf_retrieve(self,query_vector):
-        with open("assets/docs_norm.pkl") as file:
+        with open("assets/docs_norm.pkl", 'rb') as file:
             self.__tfidf_docs_norm = pickle.load(file)
         similarity = np.dot(query_vector, self.__tfidf_docs_vec.T) / (norm(query_vector.toarray()) * self.__tfidf_docs_norm)
         del self.__tfidf_docs_norm
