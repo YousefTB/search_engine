@@ -3,7 +3,7 @@ from Search_Engine import SearchEngine
 
 c1, c2, c3 = st.columns([5,2,5])
 with c2:
-    st.image('photo/bfcai.png', caption="Faculty of Computer and Artificial Intelligence")
+    st.image('photos/bfcai.png', caption="Faculty of Computer and Artificial Intelligence")
 
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
