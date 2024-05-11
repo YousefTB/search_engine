@@ -87,7 +87,7 @@ class SearchEngine():
         list_docs = list(self.__docs['Preprocessed'].to_numpy())
         self.__tfidf_vectorizer = TfidfVectorizer()
         self.__tfidf_docs_vec = self.__tfidf_vectorizer.fit_transform(list_docs)
-        self.__tfidf_docs_norm = norm(self.__tfidf_docs_vec)
+        self.__tfidf_docs_norm = norm(self.__tfidf_docs_vec, axis=1)
 
     def __term_document_matrix_query_transform(self,query):
         query_vector = []
