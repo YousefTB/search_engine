@@ -15,6 +15,7 @@ class SearchEngine():
     def __init__(self):
         
         self.__docs = pd.read_csv("assets/Arabic news preprocessed_2500.csv", index_col=0)
+        self.__docs = self.docs.iloc[:1000,:]
         self.__extract_vocabulary()
         self.__term_document_matrix_indexing()
         self.__tfidf_indexing()
