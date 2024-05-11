@@ -1,7 +1,9 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
-st.set_page_config(page_title="Dynamo SearchEngine", page_icon="photos/icon.png", menu_items={"About":"Creator: Yousef Elbaroudy\nEmail: yousef.elbaroudy02@gmail.com"})
+st.set_page_config(page_title="Dynamo SearchEngine", page_icon="photos/icon.png", menu_items={"About":"""Creator: Yousef Elbaroudy
+
+Email: yousef.elbaroudy02@gmail.com"""})
 
 c1, c2, c3 = st.columns([1,30,1])
 with c2:
@@ -42,6 +44,8 @@ with tab2:
                     st.write(result[i])
                     
                     
-st.markdown("""$##Created By:$
+st.markdown("""#Created By:
+
 :red[Yousef Elbaroudy]
+
 yousef.elbaroudy02@gmail.com""")
