@@ -40,3 +40,8 @@ with tab2:
             for i in range(len(result)):
                 with st.expander(f"See Result {i + 1}"):
                     st.write(result[i])
+                    
+                    
+st.markdown("""$##Created By:$
+:red[Yousef Elbaroudy]
+yousef.elbaroudy02@gmail.com""")
