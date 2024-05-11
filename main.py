@@ -1,18 +1,9 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
-background_image = """
-<style>
-[data-testid="stAppViewContainer"] > .main {
-    background-image: url("https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg");
-    background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
-    background-position: center;  
-    background-repeat: no-repeat;
-}
-</style>
-"""
-
-st.markdown(background_image, unsafe_allow_html=True)
+c1, c2, c3 = st.columns([5,2,5])
+with c2:
+    st.image('photo/bfcai.png', caption="Faculty of Computer and Artificial Intelligence")
 
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
