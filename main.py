@@ -20,7 +20,7 @@ with tab1:
     with col2:
         button1_clicked = st.button("Search", key='button1')
         
-    if button1_clicked:
+    if button1_clicked and text_input != None:
         with st.spinner("Searching ..."):
             result = st.session_state['my_engine'].find(text_input, 1)
             
@@ -35,7 +35,7 @@ with tab2:
     with col2:
         button1_clicked = st.button("Search", key='button2')
         
-    if button1_clicked:
+    if button1_clicked and text_input != None:
         with st.spinner("Searching ..."):
             result = st.session_state['my_engine'].find(text_input, 2)
             
