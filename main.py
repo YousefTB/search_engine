@@ -10,7 +10,7 @@ with c2:
     st.title("Dynamo Search Engine")
     st.image('photos/bfcai.png', caption="Faculty of Computers and Artificial Intelligence")
 
-with st.spinner("Configuring ...")
+with st.spinner("Configuring ..."):
     if "my_engine" not in st.session_state:
         st.session_state['my_engine'] = SearchEngine()
     
