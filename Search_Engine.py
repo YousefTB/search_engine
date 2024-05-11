@@ -116,7 +116,6 @@ class SearchEngine():
 
     def __tfidf_retrieve(self,query_vector):
         similarity = np.dot(query_vector, self.__tfidf_docs_vec.T) / (norm(query_vector.toarray()) * self.__tfidf_docs_norm)
-        del self.__tfidf_docs_norm
         return similarity
 
 
