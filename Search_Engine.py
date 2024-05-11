@@ -15,21 +15,10 @@ class SearchEngine():
     def __init__(self):
         
         self.__docs = pd.read_csv("assets/Arabic news preprocessed_2500.csv", index_col=0)
+        self.__extract_vocabulary()
+        self.__term_document_matrix_indexing()
+        self.__tfidf_indexing()
         
-        with open("assets/term_document_matrix_data.pkl","rb") as file:
-            self.__data = pickle.load(file)
-            
-        with open("assets/tfidf_vectorizer.pkl", "rb") as file:
-            self.__tfidf_vectorizer = pickle.load(file)
-
-        with open("assets/tfidf_doc_vec.pkl", 'rb') as file:
-            self.__tfidf_docs_vec = pickle.load(file)
-            
-        with open("assets/docs_norm.pkl", "rb") as file:
-            self.__tfidf_docs_norm = pickle.load(file)
-
-        self.__voc = self.__data['Voc']
-        self.__term_frequency_model = self.__data['Model']
 
     def __preprocess(self, query):
         # Removing Punctuations

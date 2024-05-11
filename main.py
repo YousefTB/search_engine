@@ -10,8 +10,9 @@ with c2:
     st.title("Dynamo Search Engine")
     st.image('photos/bfcai.png', caption="Faculty of Computers and Artificial Intelligence")
 
-if "my_engine" not in st.session_state:
-    st.session_state['my_engine'] = SearchEngine()
+with st.spinner("Configuring ...")
+    if "my_engine" not in st.session_state:
+        st.session_state['my_engine'] = SearchEngine()
     
 tab1, tab2 = st.tabs(["Boolean Search", "FasterAI Search"])
 with tab1:
@@ -20,7 +21,7 @@ with tab1:
     with col2:
         button1_clicked = st.button("Search", key='button1')
         
-    if button1_clicked and text_input != None:
+    if button1_clicked and text_input != None and len(text_input) > 1:
         with st.spinner("Searching ..."):
             result = st.session_state['my_engine'].find(text_input, 1)
             
@@ -28,6 +29,7 @@ with tab1:
             for i in range(len(result)):
                 with st.expander(f"See Result {i + 1}"):
                     st.write(result[i])
+            del result
                 
 with tab2:
     text_input = st.text_input("Search bar", value=None, max_chars=256, key="text2", placeholder="بتدوّر على إيه ؟")
@@ -35,7 +37,7 @@ with tab2:
     with col2:
         button1_clicked = st.button("Search", key='button2')
         
-    if button1_clicked and text_input != None:
+    if button1_clicked and text_input != None and len(text_input) > 1:
         with st.spinner("Searching ..."):
             result = st.session_state['my_engine'].find(text_input, 2)
             
@@ -43,6 +45,7 @@ with tab2:
             for i in range(len(result)):
                 with st.expander(f"See Result {i + 1}"):
                     st.write(result[i])
+            del result
                     
                     
 with st.container(border=True):
