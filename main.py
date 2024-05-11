@@ -7,6 +7,7 @@ Email: yousef.elbaroudy02@gmail.com"""})
 
 c1, c2, c3 = st.columns([1,30,1])
 with c2:
+    st.title("Dynamo Search Engine")
     st.image('photos/bfcai.png', caption="Faculty of Computers and Artificial Intelligence")
 
 if "my_engine" not in st.session_state:
@@ -44,11 +45,13 @@ with tab2:
                     st.write(result[i])
                     
                     
-                    
-cc1, cc2, cc3 = st.columns([1,10,1)
-with cc2:
-    st.markdown("""**Created By:
+with st.container(border=True):
+    cc1, cc2, cc3 = st.columns([1,10,1])
+    with cc2:
+        st.header("Created by:")
+        st.markdown('''
+        :red[Yousef Elbaroudy]
 
-    :red[Yousef Elbaroudy]
-
-    Email: yousef.elbaroudy02@gmail.com""")
+        Email: yousef.elbaroudy02@gmail.com
+        
+        Github Profile: https://github.com/YousefTB''')
