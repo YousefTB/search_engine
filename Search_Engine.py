@@ -87,6 +87,7 @@ class SearchEngine():
         list_docs = list(self.__docs['Preprocessed'].to_numpy())
         self.__tfidf_vectorizer = TfidfVectorizer()
         self.__tfidf_docs_vec = self.__tfidf_vectorizer.fit_transform(list_docs)
+        self.__tfidf_docs_norm = norm(self.__tfidf_docs_vec)
 
     def __term_document_matrix_query_transform(self,query):
         query_vector = []
@@ -114,8 +115,6 @@ class SearchEngine():
         return dict_res
 
     def __tfidf_retrieve(self,query_vector):
-        with open("assets/docs_norm.pkl", 'rb') as file:
-            self.__tfidf_docs_norm = pickle.load(file)
         similarity = np.dot(query_vector, self.__tfidf_docs_vec.T) / (norm(query_vector.toarray()) * self.__tfidf_docs_norm)
         del self.__tfidf_docs_norm
         return similarity
