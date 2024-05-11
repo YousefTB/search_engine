@@ -17,14 +17,29 @@ st.markdown(background_image, unsafe_allow_html=True)
 if "my_engine" not in st.session_state:
     st.session_state['my_engine'] = SearchEngine()
     
-
-text_input = st.text_input("Search bar", value=None, max_chars=256, key="text1", placeholder="بتدوّر على إيه ؟")
-col1, col2, col3 = st.columns([5,2,5])
-with col2:
-    button1_clicked = st.button("Search", key='button1')
-if button1_clicked:
-    with st.spinner("Searching ..."):
-        result = st.session_state['my_engine'].find(text_input, 1)
-    for i in range(len(result)):
-        with st.expander(f"See Result {i + 1}"):
-            st.write(result[i])
+tab1, tab2 = st.tabs(["Boolean Search", "FasterAI Search"])
+with tab1:
+    text_input = st.text_input("Search bar", value=None, max_chars=256, key="text1", placeholder="بتدوّر على إيه ؟")
+    col1, col2, col3 = st.columns([5,2,5])
+    with col2:
+        button1_clicked = st.button("Search", key='button1')
+        
+    if button1_clicked:
+        with st.spinner("Searching ..."):
+            result = st.session_state['my_engine'].find(text_input, 1)
+        for i in range(len(result)):
+            with st.expander(f"See Result {i + 1}"):
+                st.write(result[i])
+                
+with tab2:
+    text_input = st.text_input("Search bar", value=None, max_chars=256, key="text1", placeholder="بتدوّر على إيه ؟")
+    col1, col2, col3 = st.columns([5,2,5])
+    with col2:
+        button1_clicked = st.button("Search", key='button1')
+        
+    if button1_clicked:
+        with st.spinner("Searching ..."):
+            result = st.session_state['my_engine'].find(text_input, 1)
+        for i in range(len(result)):
+            with st.expander(f"See Result {i + 2}"):
+                st.write(result[i])
