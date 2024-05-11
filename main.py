@@ -44,8 +44,11 @@ with tab2:
                     st.write(result[i])
                     
                     
-st.markdown("""#Created By:
+                    
+cc1, cc2, cc3 = st.columns([1,10,1)
+with cc2:
+    st.markdown("""**Created By:
 
-:red[Yousef Elbaroudy]
+    :red[Yousef Elbaroudy]
 
-yousef.elbaroudy02@gmail.com""")
+    Email: yousef.elbaroudy02@gmail.com""")
