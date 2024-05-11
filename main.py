@@ -1,7 +1,7 @@
 import streamlit as st
 from Search_Engine import SearchEngine
 
-c1, c2, c3 = st.columns([5,2,5])
+c1, c2, c3 = st.columns([1,30,1])
 with c2:
     st.image('photos/bfcai.png', caption="Faculty of Computer and Artificial Intelligence")
 
